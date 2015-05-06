@@ -16,14 +16,18 @@
 							<?php the_tags( '', ' / ', '<br />' ); ?>
 						</p>
 			</div>
-			<?php if ( has_post_thumbnail() ) {?>
+	
 				<div class="img_artigo">
 					
 					<div class="div_img">
-						<?php the_post_thumbnail(array(935,485));?>
+					<a href="<?php the_permalink();?>" ><?php if (class_exists('MultiPostThumbnails')) :
+						    MultiPostThumbnails::the_post_thumbnail(
+						        get_post_type(),
+						        'secondary-image'
+						    );
+						endif; ?></a>
 					</div>
 				</div>	
-			<?php }?> 
 			<div class="resumo_artigo_categoria">
 				<a href="<?php the_permalink();?>" class="leia_mais_categoria">leia mais ></a>			
 			 </div>
@@ -37,17 +41,19 @@
 	if(have_posts()): while(have_posts()) : the_post();
 ?>
 <div class="artigo">
-<?php if ( has_post_thumbnail() ) {?>
+
 	<div class="img_artigo">
 		<div class="bola_data">		
 			<p><?php the_time('d M');?></p>
 			<?php the_category('title_a=');?>
 		</div>
+		<?php if ( has_post_thumbnail() ) {?>
 		<div class="div_img">
-			<?php the_post_thumbnail(array(619,619));?>
+			<a href="<?php the_permalink();?>" ><?php the_post_thumbnail(array(619,619));?></a>
 		</div>
+		<?php }?> 
 	</div>	
-<?php }?> 
+
 	<div class="container_artigo">
 		<a href="<?php the_permalink();?>" class="title"><h1><?php the_title(); ?></h1></a>
 		<hr>

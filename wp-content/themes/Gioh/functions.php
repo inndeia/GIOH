@@ -19,6 +19,15 @@ if ( function_exists('register_sidebar') ) {
 		        'description' => __( 'Instagram local' )
   		 ));
 }
+if (class_exists('MultiPostThumbnails')) {
+	new MultiPostThumbnails(
+			array(
+					'label' => 'Imagem Destacada Interna',
+					'id' => 'secondary-image',
+					'post_type' => 'post'
+			)
+	);
+}
 if ( function_exists('register_sidebar') ) {
 		 register_sidebar( array(
 		  //nome da nova sidebar

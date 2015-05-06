@@ -4,7 +4,7 @@
 			<a href="<?php echo get_option('home');?>"><img src="<?php echo get_bloginfo('template_directory');?>/img/logo_footer.png"/></a>
 		</div>
 		<div class="menu_footer">
-				<ul class="drop_menu">
+				<ul>
 					<li><a href="#">inspire-se</a>
 						<ul>
 							<?php wp_list_categories('title_li=');?>
