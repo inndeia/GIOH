@@ -135,13 +135,17 @@
 				if ( get_post_meta( $post->ID, "slide_url_value", $single = true ) != "" ): ?>
 						
 					<a href="<?php echo get_post_meta( $post->ID, "slide_url_value", $single = true ); ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail( 'featured-slide', array( 'title' => get_the_title() ) ); ?></a>
-					<div class="title_img"><a href="<?php echo get_post_meta( $post->ID, "slide_url_value", $single = true ); ?>"><p><?php echo get_the_title();?></p></a><hr class="hr_hover"></div>
+					<?php if(get_the_title() != ""):?>
+						<div class="title_img"><a href="<?php echo get_post_meta( $post->ID, "slide_url_value", $single = true ); ?>"><p><?php echo get_the_title();?></p></a><hr class="hr_hover"></div>
+					<?php endif; ?>
 				<?php // Adds slide image without Slide URL link
 					
 				else: ?>
 					
 					<?php the_post_thumbnail( 'featured-slide', array( 'title' => get_the_title() ) ); ?>
-					<div class="title_img"><p><?php echo get_the_title();?></p></div>
+					<?php if(get_the_title() != ""):?>
+						<div class="title_img"><p><?php echo get_the_title();?></p></div>
+					<?php endif; ?>
 				<?php endif; ?>
 			
 			</div><!-- .mslide -->

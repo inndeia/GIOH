@@ -87,7 +87,6 @@ div.meteor-slides.navboth {
 	height: auto !important;
 	margin: auto !important;
 	max-width: 100%;
-	padding: 0 !important;
 	width: auto\9; /* IE8 */
 }
 .meteor-slides .mslide img[src$='.png'] {

@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <div class="slide_home">
-	<?php if ( function_exists( 'meteor_slideshow' ) ) { meteor_slideshow(); } ?>
+	<?php if ( function_exists( 'meteor_slideshow' ) ) { meteor_slideshow("inicial", ""); } ?>
 	<hr>
 </div>
 <div class="div_mais_vistos">
@@ -71,7 +71,8 @@
 ?>
 </div>
 <div class="right_container">
-	<?php get_sidebar();?>
+	<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('PaginaInicial') ) : ?>
+		<?php endif; ?>
 </div>
 </div>
 	<div class="instagram">

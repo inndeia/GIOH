@@ -11,31 +11,42 @@ if ( function_exists('register_sidebar') ) {
 		    register_sidebar( array(
 		        //nome da nova sidebar
 		        'name' => __( 'Instagram' ),
-
 		        //identifica a nova sidebar no html
-		        'id' => 'Instagram',
-		
+		        'id' => 'Instagram',		
 		        //identifica a nova sidebar no wp-admin
 		        'description' => __( 'Instagram local' )
   		 ));
 }
+if ( function_exists('register_sidebar') ) {
+	register_sidebar( array(
+	//nome da nova sidebar
+	'name' => __( 'PaginaInicial' ),
+	//identifica a nova sidebar no html
+	'id' => 'PaginaInicial',
+	//identifica a nova sidebar no wp-admin
+	'description' => __( 'Home local' ),
+	'before_widget'	=>	'<div class="widgets">',
+	'after_widget'	=>	'</div>',
+	'before_title'	=>	'<h2>',
+	'after_title'	=>	'</h2>'
+	));
+}
 if (class_exists('MultiPostThumbnails')) {
 	new MultiPostThumbnails(
 			array(
-					'label' => 'Imagem Destacada Interna',
+					'label' => 'Imagem Destacada Interna (Tamanho Imagem 1366x547)',
 					'id' => 'secondary-image',
 					'post_type' => 'post'
 			)
 	);
 }
+add_image_size('post-secondary-image-thumbnail', 252, 105);
 if ( function_exists('register_sidebar') ) {
 		 register_sidebar( array(
 		  //nome da nova sidebar
-		 'name' => __( 'Contato' ),
-				
+		 'name' => __( 'Contato' ),				
 		 //identifica a nova sidebar no html
-		 'id' => 'Contato',
-		
+		 'id' => 'Contato',		
 		  //identifica a nova sidebar no wp-admin
 		  'description' => __( 'Contato local' )
 		));
@@ -48,6 +59,9 @@ add_action('widgets_init', create_function('', 'return register_widget("Contribu
 
 include 'widgets/contato_widget.php';
 add_action('widgets_init', create_function('', 'return register_widget("Contato_Widget");'));
+
+include 'widgets/historicoPost_widget.php';
+add_action('widgets_init', create_function('', 'return register_widget("HistoricoPost_Widget");'));
 
 function hrw_enqueue($hook)
 {
@@ -77,4 +91,14 @@ function paginacao() {
 			)
 	);
 }
+
+function boutique_shortcode( $atts, $content = null ) {
+	return '<div class="boutique">' . $content . '<hr></div>';
+}
+add_shortcode( 'boutique', 'boutique_shortcode' );
+
+function contribuidores_shortcode( $atts, $content = null ) {
+	return '<div class="contribuidores">' . $content . '</div>';
+}
+add_shortcode( 'contribuidores', 'contribuidores_shortcode' );
 ?>

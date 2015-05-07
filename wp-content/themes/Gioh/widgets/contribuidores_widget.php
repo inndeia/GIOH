@@ -4,7 +4,7 @@ class Contribuidores_Widget extends WP_Widget{
 		parent::__construct(
 			'Contribuidores_Widget', // Base ID
 			__( 'Contribuidores Widget', 'text_domain' ), // Name
-			array( 'description' => __( 'Foto e link para a página Contribuidores.', 'text_domain' ), ) // Args
+			array( 'description' => __( 'Foto e link para a pï¿½gina Contribuidores.', 'text_domain' ), ) // Args
 		);
 	}
 	public function widget( $args, $instance ) {
@@ -16,6 +16,7 @@ class Contribuidores_Widget extends WP_Widget{
 	}
 	public function form( $instance ) {
 		$title = ! empty( $instance['title'] ) ? $instance['title'] : __( 'New title', 'text_domain' );
+		$image_uri = ! empty( $instance['image_uri'] ) ? $instance['image_uri'] : __( 'New imagem', 'text_domain' );
 		?>
 			<p>
 			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label> 
@@ -23,7 +24,7 @@ class Contribuidores_Widget extends WP_Widget{
 			</p>
 			<p>
 		      <label for="<?php echo $this->get_field_id('image_uri'); ?>">Image</label><br />
-		      <input type="text" class="img" name="<?php echo $this->get_field_name('image_uri'); ?>" id="<?php echo $this->get_field_id('image_uri'); ?>" value="<?php echo $instance['image_uri']; ?>" />
+		      <input type="text" class="img" name="<?php echo $this->get_field_name('image_uri'); ?>" id="<?php echo $this->get_field_id('image_uri'); ?>" value="<?php echo esc_attr( $image_uri ); ?>" />
 		      <input type="button" class="select-img" value="Select Image" />
 		    </p>
 			<?php 
