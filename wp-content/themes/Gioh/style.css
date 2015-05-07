@@ -67,11 +67,10 @@ img{
 	position:relative;
 	width:100%;
 	margin:0 auto;
-	height:156px;
+	height:153px;
 	background-color:#fff2ee;
 	background-image:url('img/bg_header.png');
 	background-repeat:no-repeat;
-	background-size:100% 100%;
 	border-bottom:1px solid #000;
 	margin-bottom: 10px;
 }
@@ -263,7 +262,7 @@ img{
 	text-decoration: underline;	
 }
 .container_artigo{
-	margin: 10px;	
+	margin: 23px 10px;	
 }
 .container_artigo a{
 	font-family: 'Optima_Bold_Oblique';
@@ -278,7 +277,7 @@ img{
 	font-size: 2.0em;
 }
 .container_artigo hr{
-	margin-top: 10px;
+	margin-top:18px;
 	margin-bottom: 10px;
 	color:#000;
 	border-width: 0; 
@@ -289,8 +288,10 @@ img{
 	font-family: arial;
 }
 .resumo_artigo p{
-	margin-top:10px;
+	margin-top:25px;
 	margin-bottom:10px;
+	color:#363636;
+	line-height: 27px;
 }
 .resumo_artigo a:hover{
 	text-decoration: none;
@@ -492,9 +493,10 @@ img{
 	list-style-type:none;
 	height:30px;
 }
-.drop_menu li { display:inline; }
+.drop_menu li { display:inline; padding:0px 50px;}
+.drop_menu li ul li{ padding:0px}
 .drop_menu li a {
-	padding:0px 50px;
+	
 	font-family: 'Bodoni_SvtyTwo_ITC_TT_BookIta';
 	color:#000;
 	text-decoration: none;
@@ -511,7 +513,9 @@ img{
 }
 .drop_menu li:hover { position:relative;  }
 .drop_menu li a:hover{
-	text-decoration: underline;
+	text-decoration: none;
+	border-bottom: 1px solid #000;
+	padding-bottom: 3px;
 }
 .drop_menu li:hover ul {
 	left:0px;
@@ -528,7 +532,7 @@ img{
 	padding: 5px 20px;
 	
 }
-.drop_menu li:hover ul li a:hover { color:#b97e79; text-decoration: none; }
+.drop_menu li:hover ul li a:hover { color:#b97e79; text-decoration: none;border:none; }
 
 .post_tag{
 	margin-top:30px;
@@ -826,8 +830,8 @@ img{
 }
 .nav-fixed{
 	display:none;
-	height:90px;
-	background-color: #ffe8e1;
+	height:83px;
+	background-color: #fff6f3;
 	border-bottom: 1px solid #000;
 	border-top: 1px solid #000;
 }
@@ -838,17 +842,17 @@ img{
 	top: 0; width:100%;
 }
 .navbar{
-	margin-top: 30px;
+	margin-top: 27px;
 	float: left;
 	margin-left: 15.79%;
 }
 .logo_menu_fixo{
-	margin-top: 16px;
+	margin-top: 12px;
 	float: left;
 	margin-left: 28.23%;
 }
 .midias_menu_fixo{
-	margin-top: 35px;
+	margin-top: 33px;
 	float: left;
 	margin-left: 23.87%;
 }
@@ -1177,4 +1181,7 @@ ol.commentlist ul li{
 	font-family: arial;
 	text-align: justify;
 	color:#363636;
+}
+.img_artigo{
+	margin-top: 95px;
 }

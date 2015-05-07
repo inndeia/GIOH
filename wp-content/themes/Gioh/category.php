@@ -53,7 +53,10 @@
 		</div>
 		<?php }?> 
 	</div>	
-
+	<?php if (!has_post_thumbnail() ) {?>
+ 		<div style="height: 70px">
+		</div>
+	<?php }?>
 	<div class="container_artigo">
 		<a href="<?php the_permalink();?>" class="title"><h1><?php the_title(); ?></h1></a>
 		<hr>

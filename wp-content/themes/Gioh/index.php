@@ -34,7 +34,7 @@
 		<?php }?>
 	</div>
 	<?php if (!has_post_thumbnail() ) {?>
- 		<div style="margin-top:35px;margin-bottom: 60px; ">
+ 		<div style="height: 70px">
 		</div>
 	<?php }?>
 	<div class="container_artigo">
