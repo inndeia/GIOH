@@ -63,6 +63,9 @@ add_action('widgets_init', create_function('', 'return register_widget("Contato_
 include 'widgets/historicoPost_widget.php';
 add_action('widgets_init', create_function('', 'return register_widget("HistoricoPost_Widget");'));
 
+include 'widgets/boutique_widget.php';
+add_action('widgets_init', create_function('', 'return register_widget("Boutique_Widget");'));
+
 function hrw_enqueue($hook)
 {
 if ( 'widgets.php' != $hook ) {

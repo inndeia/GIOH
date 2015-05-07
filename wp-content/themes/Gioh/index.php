@@ -48,7 +48,7 @@
 		<div class="post_tag">
 			<p>
 				<span class="texto_tag">tags </span>
-				<?php the_tags( '', ' / ', '<br />' ); ?>
+				<?php the_tags( ' ', ' / ', '<br />' ); ?>
 			</p>
 		</div>
 	</div>
