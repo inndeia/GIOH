@@ -63,6 +63,7 @@
 }
 img{
 	max-width: 100%;
+	height: auto;
 }
 /*FIM configuracoes*/
 /* Header, container, footer*/
@@ -545,10 +546,61 @@ img{
 	margin-top: 20px;
 }
 .hr_cima{
-	margin-bottom: -20px;
+	margin-bottom: 10px;
 }
 .hr_baixo{
-	margin-top: -20px;
+	margin-top: 10px;
+}
+.prev_mais_vistos{
+	background-color: #FFF;
+	border: 1px solid #000;
+	color:#000;
+	padding: 5px 10px;
+	position:absolute;
+	left:9%;
+	z-index: 11;
+	cursor: pointer;
+	margin-top: 80px;
+}
+.prev_mais_vistos:hover{
+	background-color: #000;
+	color:#FFF;
+}
+.next_mais_vistos{
+	background-color: #FFF;
+	border: 1px solid #000;
+	color:#000;
+	padding: 5px 10px;
+	position:absolute;
+	right:9%;
+	z-index: 11;
+	cursor: pointer;
+	margin-top: 80px;
+}
+.next_mais_vistos:hover{
+	background-color: #000;
+	color:#FFF;
+}
+.carousel-no-style ul li{
+	padding-left: 20px;
+}
+.pattern_left_mais_vistos{
+	position: absolute;
+	left:0;
+	height: 190px;
+	width: 12%;
+	z-index: 10;
+	opacity:0.5;
+	background-color: #FFF;
+}
+.pattern_right_mais_vistos{
+	position: absolute;
+	right:0;
+	height: 190px;
+	width: 10%;
+	z-index: 10;
+	opacity:0.4;
+	background-color: #FFF;
 }
 .artigo{
 	border-top: 1px dotted #000;
@@ -1478,7 +1530,7 @@ ol.commentlist ul li{
 }
 /*FIM SINGLE*/
 /*MOBILE*/
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
 	.header, .right_container, .menu_footer, .instagram, .div_mais_vistos, .slide_post_mais_lidos{
 		display: none;
 	}
@@ -1511,10 +1563,6 @@ ol.commentlist ul li{
 	}
 	.resumo_artigo p{
 		text-align: left;
-	}
-	img{
-		max-width:auto;
-		max-height: auto;
 	}
 	.data_mobile{
 		width: 109.50%;

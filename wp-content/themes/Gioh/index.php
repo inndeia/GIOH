@@ -11,10 +11,53 @@
 	<hr class="right">
 </div>
 <div class="slide_post_mais_lidos">
-<hr class="hr_cima">
-<?php echo do_shortcode('[carousel-horizontal-posts-content-slider]'); ?>
+	<hr class="hr_cima">
+<?php
+$nova_consulta = new WP_Query( 
+    array(
+        'posts_per_page'      => 10,                 // Máximo de 5 artigos
+        'no_found_rows'       => true,              // Não conta linhas
+        'post_status'         => 'publish',         // Somente posts publicados
+        'ignore_sticky_posts' => true,              // Ignora posts fixos
+        'orderby'             => 'meta_value_num',  // Ordena pelo valor da post meta
+        'meta_key'            => 'tp_post_counter', // A nossa post meta
+        'order'               => 'DESC'             // Ordem decrescente
+    )
+);
+?>
+	<button class="prev_mais_vistos">&laquo;</button>	
+	<button class="next_mais_vistos">&raquo;</button>
+	<div class="pattern_left_mais_vistos"></div>
+	<div class="pattern_right_mais_vistos"></div>
+	<div class="carousel-no-style">
+	    <ul>
+	    <?php if ( $nova_consulta->have_posts() ): ?>
+        <?php while ( $nova_consulta->have_posts() ): ?>
+        
+            <?php $nova_consulta->the_post(); ?>
+            <?php $tp_post_counter = get_post_meta( $post->ID, 'tp_post_counter', true );?>
+            	 <?php if( has_post_thumbnail() ): ?>
+	        		<li><a href="<?php the_permalink(); ?>">
+                            <?php the_post_thumbnail('mais-visto-thumbnail'); ?>
+                        </a></li>
+                  <?php endif; // has_post_thumbnail ?>
+        <?php endwhile; ?>
+    <?php endif; // have_posts ?>
+ 
+    <?php wp_reset_postdata(); ?>
+	    </ul>
+	</div>
+	
 </div>
-<hr class="hr_baixo">
+<script type="text/javascript"src="<?php echo get_bloginfo('template_directory');?>/js/jquery.jcarousellite.js"></script>
+<script type="text/javascript">
+jQuery(".carousel-no-style").jCarouselLite({
+    btnNext: ".next_mais_vistos",
+    btnPrev: ".prev_mais_vistos",
+    visible: 6.5
+});
+</script>
+	<hr class="hr_baixo">
 <div class="container">
 <div class="left_container">
 <?php 
