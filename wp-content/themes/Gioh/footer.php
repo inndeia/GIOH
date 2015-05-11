@@ -21,7 +21,7 @@
 			<a href="#"><img src="<?php echo get_bloginfo('template_directory');?>/img/rede.png"/></a>
 			<hr>
 			<div class="direitos">
-				<p> &copy; <?php echo date('Y');?>. Todos os direitos reservados.</p>
+				<p> &copy; <?php echo date('Y');?>. Todos os direitos reservados.</p><a href="http://www.inndeia.com"><img src="<?php echo get_bloginfo('template_directory');?>/img/logo_inndeia.png"/></a>
 			</div>
 		</div>
 	</div>

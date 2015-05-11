@@ -2,14 +2,15 @@
 <?php get_header(); ?>
 
 
-<div class="container_contato">
-	<div class="header_contato">
+
+	<div class="header_img_border">
 		<img src="<?php echo get_bloginfo('template_directory');?>/img/bg_contato.png"/>
 		<div class="nome_contato">
 			<p>Contato</p>
 		</div>
 	</div>
-	<div class="left_container_contato">
+<div class="container">
+	<div class="left_container">
 <?php 
 	if(have_posts()): while(have_posts()) : the_post();
 ?>
@@ -25,7 +26,7 @@
 	endif;
 ?>
 </div>
-<div class="right_container_contato">
+<div class="right_container">
 	<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Contato') ) : ?>
 		<?php endif; ?>
 </div>

@@ -49,6 +49,25 @@
 				</ul>
 			</div>
 		</div>
+		<div class="header_mobile">
+			<div class="navbar_mobile">
+					<a href="javascript:mostraEscondeMobile();"><img title="Menu" src="<?php echo get_bloginfo('template_directory');?>/img/navbar.png"/></a>
+				</div>				
+				<div class="logo_menu_fixo_mobile">
+					<a href="<?php echo get_option('home');?>"><img src="<?php echo get_bloginfo('template_directory');?>/img/logo_menu_fixo.png"/></a>
+				</div>
+			</div>
+			<div id='cssmenu_mobile'>
+				<ul>
+				  <li><a href="#">inspire-se</a>
+						<ul>
+							<?php wp_list_categories('title_li=');?>
+						</ul>					
+					</li>
+					<?php wp_list_pages('title_li=');?>
+				</ul>
+			</div>
+		</div>
 		<script type="text/javascript">
 			jQuery(function(){   
 			var nav = jQuery('#nav-fixed');   
@@ -85,8 +104,35 @@
 					});
 				});
 			});
+			jQuery(function(){
+				jQuery( document ).ready(function() {
+					
+					jQuery('#cssmenu_mobile > ul > li > ul').parent().addClass('hashub');
+					jQuery('#cssmenu_mobile > ul > li > a').click(function() {
+					  jQuery('#cssmenu_mobile li').removeClass('active');
+					  jQuery(this).closest('li').addClass('active');	
+					  var checkElement = jQuery(this).next();
+					  if((checkElement.is('ul')) && (checkElement.is(':visible'))) {
+						jQuery(this).closest('li').removeClass('active');
+						checkElement.slideUp('normal');
+					  }
+					  if((checkElement.is('ul')) && (!checkElement.is(':visible'))) {
+						jQuery('#cssmenu_mobile ul ul:visible').slideUp('normal');
+						checkElement.slideDown('normal');
+					  }
+					  if(jQuery(this).closest('li').find('ul').children().length == 0) {
+						return true;
+					  } else {
+						return false;	
+					  }		
+					});
+				});
+			});
 			function mostraEsconde(){
 				jQuery('#cssmenu').toggle();
+			}
+			function mostraEscondeMobile(){
+				jQuery('#cssmenu_mobile').toggle();
 			}
 			
 	</script>

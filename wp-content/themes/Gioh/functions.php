@@ -7,6 +7,7 @@ if(function_exists('register_sidebar'))
 			'after_title'	=>	'</h2>',
 		));
 add_theme_support('post-thumbnails');
+add_image_size( 'pequena', 250, 150, true );
 if ( function_exists('register_sidebar') ) {
 		    register_sidebar( array(
 		        //nome da nova sidebar
@@ -104,4 +105,56 @@ function contribuidores_shortcode( $atts, $content = null ) {
 	return '<div class="contribuidores">' . $content . '</div>';
 }
 add_shortcode( 'contribuidores', 'contribuidores_shortcode' );
+function get_the_twitter_excerpt(){
+	$excerpt = get_the_content();
+	$excerpt = strip_shortcodes($excerpt);
+	$excerpt = strip_tags($excerpt);
+	$the_str = substr($excerpt, 0, 60);
+	return $the_str."...";
+}
+function show_related_posts_by_tag(){
+	global $post;
+
+	$tags = wp_get_post_tags($post->ID);
+	if ($tags) {
+		$tag_ids = array();
+		foreach($tags as $individual_tag)
+			$tag_ids[] = $individual_tag->term_id;
+
+		$args=array(
+				'tag__in' => $tag_ids,
+				'post__not_in' => array($post->ID),
+				'posts_per_page' => 3 // Number of related posts that will be shown.
+		);
+		$my_query = new wp_query($args);
+		if( $my_query->have_posts() ) {
+
+			echo '<div id="postsRelacionados">';
+			while ($my_query->have_posts()) {
+				$my_query->the_post(); 
+				?>
+						<div class="conteudoRelacionados">
+							<div class="categoriasRelacionados">
+								<?php the_category('title_a=');?>
+							</div>
+							<div class="fotoRelacionados">
+								<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'pequena' ); } ?></a>
+							</div>
+							<div class="tituloRelacionados">
+								<a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+							</div>
+							<div class="textoRelacionados">
+								<?php echo get_the_twitter_excerpt(); ?>
+							</div>
+							
+						</div>
+				<?php
+			
+			} 
+			echo '</div>';
+
+                       wp_reset_query(); //reseting custom query...
+		} 
+	} 
+}
 ?>

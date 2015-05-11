@@ -21,11 +21,21 @@
 	if(have_posts()): while(have_posts()) : the_post();
 ?>
 <div class="artigo">
-
+		<div class="mobile">
+			<div class="data_mobile">
+				<div class="bola_data_mobile">		
+					<p><?php the_time('d M');?></p>
+					<?php the_category('title_a=');?>				
+				</div>
+				<hr>
+			</div>
+		</div>
 	<div class="img_artigo">
-		<div class="bola_data">		
-			<p><?php the_time('d M');?></p>
-			<?php the_category('title_a=');?>
+		<div class="desktop">
+			<div class="bola_data">		
+				<p><?php the_time('d M');?></p>
+				<?php the_category('title_a=');?>
+			</div>
 		</div>
 		<?php if ( has_post_thumbnail() ) {?>
 		<div class="div_img">
@@ -45,11 +55,21 @@
 			<a href="<?php the_permalink();?>" class="leia_mais">leia mais ></a>			
 			 
 		</div>
-		<div class="post_tag">
-			<p>
-				<span class="texto_tag">tags </span>
-				<?php the_tags( ' ', ' / ', '<br />' ); ?>
-			</p>
+		<div class="desktop">
+			<div class="post_tag">
+				<p>
+					<span class="texto_tag">tags </span>
+					<?php the_tags( ' ', ' / ', '<br />' ); ?>
+				</p>
+			</div>
+		</div>
+		<div class="mobile">
+			<div class="post_tag_mobile">
+				<div class="texto_tag_mobile">tags </div>
+				<p>					
+					<?php the_tags( ' ', ' / ', '<br />' ); ?>
+				</p>
+			</div>
 		</div>
 	</div>
 </div>

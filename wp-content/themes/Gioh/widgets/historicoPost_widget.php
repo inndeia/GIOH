@@ -11,11 +11,11 @@ class HistoricoPost_Widget extends WP_Widget{
 		echo $args['before_widget'];
 		?>
 		<h2>histórico <br><b>de publicações</b></h2>
-		<div class="caixa_post_mais_recente">
+		<div class="post_mais_recente_widget">
 		<?php
 		$aRecentPosts = new WP_Query("showposts=5"); 
 		while($aRecentPosts->have_posts()) : $aRecentPosts->the_post();?>
-		<div class="mais_recente_post">
+		<div class="post_recentes_widgets">
 			<a href="<?php the_permalink() ?>"><?php if (class_exists('MultiPostThumbnails')) :
 						    MultiPostThumbnails::the_post_thumbnail(
 						        get_post_type(),
@@ -25,7 +25,7 @@ class HistoricoPost_Widget extends WP_Widget{
 						    	null
 						    );
 						endif; ?></a><br>
-			<a href="<?php the_permalink() ?>" class="mais_recente_post_titulo"><?php the_title();?></a></li>
+			<a href="<?php the_permalink() ?>" class="post_recentes_titulo_widgets"><?php the_title();?></a></li>
 		</div>
 		<?php endwhile; ?>
 		</div>

@@ -9,9 +9,9 @@ class Contato_Widget extends WP_Widget{
 	}
 	public function widget( $args, $instance ) {
 		echo $args['before_widget'];
-		echo "<div class='contato_widget'><div class='fundo_widget'>";
+		echo "<div class='contato_widget'><div class='fundo_contato_widget'>";
 		echo "<img src='". get_bloginfo('template_directory') ."/img/telefone.png'/>";
-		echo '<div class="texto_contato"><p>'.$instance['email'].'</p><hr><p>'.$instance['endereco'].'</p><p>'.$instance['telefone'].'</p></div>';
+		echo '<div class="texto_contato_widget"><p>'.$instance['email'].'</p><hr><p>'.$instance['endereco'].'</p><p>'.$instance['telefone'].'</p></div>';
 		echo "</div></div>";
 		echo $args['after_widget'];
 	}

@@ -8,7 +8,7 @@
 	</div>
 	<hr>
 </div>
-<div class="container_gio">
+<div class="container">
 <?php 
 	if(have_posts()): while(have_posts()) : the_post();
 ?>
@@ -32,19 +32,19 @@
 	</div>
 </div>
 <div class="instagram">
-		<div class="content_texto_instagram">
-			<hr class="left">
-			<div class="texto_instagram">
-				<p>instagram</p>
-			</div>
-			<hr class="right">
+	<div class="content_texto_instagram">
+		<hr class="left">
+		<div class="texto_instagram">
+			<p>instagram</p>
 		</div>
-		<div class="imagem_instagram">
+		<hr class="right">
+	</div>
+	<div class="imagem_instagram">
 		<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Instagram') ) : ?>
 		<?php endif; ?>
-		</div>
-		<div class="texto_follow">
-			<p><a target="_blanck" href="https://instagram.com/gio_ewbank">follow @gio_ewbank</a></p>
-		</div>
+	</div>
+	<div class="texto_follow">
+		<p><a target="_blanck" href="https://instagram.com/gio_ewbank">follow @gio_ewbank</a></p>
+	</div>
 </div>
 <?php get_footer(); ?>

@@ -1,16 +1,14 @@
 <!--?php /* Template name: BOUTIQUE */ ?-->
 <?php get_header(); ?>
 
-
-<div class="container_boutique">
-	<div class="content_texto_boutique">
-			<hr class="left">
-			<div class="texto_boutique">
-				<p>BOUTIQUE</p>
-			</div>
-			<hr class="right">
+<div class="content_texto_boutique">
+	<hr class="left">
+	<div class="texto_boutique">
+		<p>BOUTIQUE</p>
 	</div>
-	<div class="left_container_boutique">
+	<hr class="right">
+</div>
+<div class="container">
 	<?php if ( function_exists( 'meteor_slideshow' ) ) { meteor_slideshow("boutique", ""); } ?>
 <?php 
 	if(have_posts()): while(have_posts()) : the_post();
@@ -26,7 +24,6 @@
 <?php
 	endif;
 ?>
-</div>
 </div>
 
 <?php get_footer(); ?>
