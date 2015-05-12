@@ -9,6 +9,7 @@ if(function_exists('register_sidebar'))
 add_theme_support('post-thumbnails');
 add_image_size( 'pequena', 250, 150, true );
 add_image_size( 'mais-visto-thumbnail', 300, 190, true );
+add_image_size( 'boutique-widget-thumbnail', 215, 275, true );
 if ( function_exists('register_sidebar') ) {
 		    register_sidebar( array(
 		        //nome da nova sidebar

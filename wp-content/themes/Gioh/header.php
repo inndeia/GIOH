@@ -9,6 +9,13 @@
 		<link rel="alternate" type="text/xml" title="RSS .92" href="<?php bloginfo('rss_url');?>"/>
 		<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="<?php bloginfo('atom_url');?>" />
 		<?php wp_head();?>
+		<style>
+			@media screen and (max-width: 768px) {
+				.meteor-slides .meteor-nav a{
+					display: none;
+				}
+			}	
+		</style>
 	</head>
 	<body>
 		<div class="header">

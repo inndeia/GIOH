@@ -11,7 +11,7 @@ class Boutique_Widget extends WP_Widget{
 		echo $args['before_widget'];
 		?>
 		
-		<h1>destacados na<br/><b>boutique</b></h1>
+		<h3>destacados na<br/><b>boutique</b></h3>
 		<div class="widget_boutique" id="widget_boutique">
 			<figure>
 			   <span id="next_boutique" class="next_boutique">></span>
@@ -19,13 +19,13 @@ class Boutique_Widget extends WP_Widget{
 			 
 			   <div id="slider_boutique">
 			   <?php if($instance['image_uri_1'] != 'Nova Imagem 1'){?>
-			      <a href="<?php echo $instance['link1']?>" target="_blanck" class="trs"><img src="<?php echo esc_url($instance['image_uri_1'])?>" alt="<?php echo $instance['descricao1']?>" /></a>
+			      <a href="<?php echo $instance['link1']?>" target="_blanck" class="trs"><img src="<?php echo esc_url($this->alterarImagem($instance['image_uri_1']))?>" alt="<?php echo $instance['descricao1']?>" /></a>
 			    <?php }
 			    	if($instance['image_uri_2'] != 'Nova Imagem 2'){?>
-			      <a href="<?php echo $instance['link2']?>" target="_blanck" class="trs"><img src="<?php echo esc_url($instance['image_uri_2'])?>" alt="<?php echo $instance['descricao2']?>" /></a>
+			      <a href="<?php echo $instance['link2']?>" target="_blanck" class="trs"><img src="<?php echo esc_url($this->alterarImagem($instance['image_uri_2']))?>" alt="<?php echo $instance['descricao2']?>" /></a>
 			    <?php }
 			    	if($instance['image_uri_3'] != 'Nova Imagem 3'){?>
-			      <a href="<?php echo $instance['link3']?>" target="_blanck" class="trs"><img src="<?php echo esc_url($instance['image_uri_3'])?>" alt="<?php echo $instance['descricao3']?>" /></a>
+			      <a href="<?php echo $instance['link3']?>" target="_blanck" class="trs"><img src="<?php echo esc_url($this->alterarImagem($instance['image_uri_3']))?>" alt="<?php echo $instance['descricao3']?>" /></a>
 			      <?php }?>
 			   </div>
 			 
@@ -174,4 +174,33 @@ class Boutique_Widget extends WP_Widget{
 		
 			return $instance;
 		}
+	private function alterarImagem($url){
+		$ext = explode(".", $url);
+		$inicio = $ext[0];
+		$inicio = explode("/",$inicio);
+		$tipo = $ext[1];
+		$count = count($inicio);
+		$nome = explode("-", $inicio[($count-1)]);
+		if($nome != false){
+		
+			$nome = $nome[0];
+			$nome .= "-215x275.".$tipo;
+		}else{
+			$nome = $inicio."-215x275.".$tipo;
+		}
+		$fim ="";
+		for($i = 0;($count-1) >$i;$i++){
+			if($i == 1){
+				$fim .= "/".$inicio[$i];
+			}else{
+				if($i == 0){
+					$fim .= $inicio[$i];
+				}else{
+					$fim .= "/".$inicio[$i];
+				}
+			}
+		}
+		$fim .="/".$nome;
+		return $fim;
+	}
 }

@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <div class="topo_categoria">
 	<div class="bola_categoria">
-		<p><?php single_cat_title( '', true );?></p>
+		<p><span><?php single_cat_title( '', true );?></span></p>
 	</div>
 	<div class="desktop">
 		<?php $recent = new WP_Query("cat=".$cat."&showposts=1"); 

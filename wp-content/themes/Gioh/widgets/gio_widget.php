@@ -10,7 +10,7 @@ class Gio_Widget extends WP_Widget{
 	public function widget( $args, $instance ) {
 		echo $args['before_widget'];
 		echo "<h1><img src='". get_bloginfo('template_directory') ."/img/logo_sidebar.png'/> <br/><span>por</span><br/>Giovanna <strong>Ewbank</strong></h1>";
-		echo '<div class="img_widget"><img src="'.esc_url($instance['image_uri']).'" /></div>';
+		echo '<div class="img_widget"><img src="'.esc_url($this->alterarImagem($instance['image_uri'])).'" /></div>';
 		echo'<div class="button_widget"><a href="index.php?page_id=4">LEIA MAIS</a></div>';
 		echo '<hr>';
 		echo $args['after_widget'];
@@ -36,5 +36,34 @@ class Gio_Widget extends WP_Widget{
 			$instance['image_uri'] = ( ! empty( $new_instance['image_uri'] ) ) ? strip_tags( $new_instance['image_uri'] ) : '';
 		
 			return $instance;
+		}
+	private function alterarImagem($url){
+			$ext = explode(".", $url);
+			$inicio = $ext[0];
+			$inicio = explode("/",$inicio);
+			$tipo = $ext[1];
+			$count = count($inicio);
+			$nome = explode("-", $inicio[($count-1)]);
+			if($nome != false){
+		
+				$nome = $nome[0];
+				$nome .= "-215x275.".$tipo;
+			}else{
+				$nome = $inicio."-215x275.".$tipo;
+			}
+			$fim ="";
+			for($i = 0;($count-1) >$i;$i++){
+				if($i == 1){
+					$fim .= "/".$inicio[$i];
+				}else{
+					if($i == 0){
+						$fim .= $inicio[$i];
+					}else{
+						$fim .= "/".$inicio[$i];
+					}
+				}
+			}
+			$fim .="/".$nome;
+			return $fim;
 		}
 }

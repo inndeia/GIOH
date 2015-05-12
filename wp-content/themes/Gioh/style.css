@@ -114,6 +114,7 @@ img{
 	list-style-type: none;
 }
 .header_img_border{
+	margin-top:40px;
 	text-align: center;
 }
 .header_img_border img{	
@@ -581,6 +582,9 @@ img{
 	background-color: #000;
 	color:#FFF;
 }
+.carousel-no-style{
+	height: 210px;
+}
 .carousel-no-style ul li{
 	padding-left: 20px;
 }
@@ -798,6 +802,10 @@ img{
 	margin-bottom: 20px;
 	color:#363636;
 }
+.artigo_gio img{
+	border: 1px solid #000;
+	padding: 8px;
+}
 .content_texto_bju_gio{
 	padding-bottom: 150px;
 }
@@ -883,15 +891,15 @@ img{
 }
 .content_texto_contribuidores hr{
 	margin-top:35px;
-	width: 36.81%;
+	width: 36%;
 }
 .texto_contribuidores{
 	position: absolute;
-	left: 39.02%;
+	left: 38%;
 }
 .texto_contribuidores p{
 	font-family: 'Optima Medium';
-	font-size:1.9em;
+	font-size:1.8em;
 	text-transform: uppercase;
 	border: 1px solid #000;
 	padding:12px 15px;
@@ -901,7 +909,8 @@ img{
 	width: 208px;
 	text-align: center;
 	float:left;
-	margin-left: 80px;
+	margin-left: 55px;
+    margin-right: 15px;
 	margin-top: 100px
 }
 .contribuidores img{
@@ -932,7 +941,7 @@ img{
 /*FIM Pagina CONTRIBUIDORES*/
 /*Pagina BOUTIQUE*/
 .content_texto_boutique{
-	padding-bottom: 70px;
+	padding-bottom: 110px;
 	margin-top: 30px;
 }
 .content_texto_boutique hr{
@@ -941,7 +950,7 @@ img{
 }
 .texto_boutique{
 	position: absolute;
-	left: 39.02%;
+	left: 38.02%;
 }
 .texto_boutique p{
 	font-family: 'Optima_Bold_Oblique';
@@ -959,7 +968,8 @@ img{
 	width: 208px;
 	text-align: center;
 	float:left;
-	margin-left: 80px;
+	margin-left: 55px;
+	margin-right:15px;
 	margin-top: 100px
 }
 .boutique img{
@@ -1069,14 +1079,18 @@ img{
 .bola_categoria a{
 	color:#FFF;
 	text-decoration: none;
-	font-size: 1.5em;
+	font-size: 1.1em;
 }
 .bola_categoria a:hover{
 	color:acacac;
 }
 .bola_categoria p{
-	padding-top:32px;
-	font-size: 1.2em;
+	padding-top:28px;
+	font-size: 1.1em;
+}
+.bola_categoria p span{
+	padding-top:28px;
+	font-size: 1.3em;
 }
 .post_tag_categoria{
 	margin:auto;
@@ -1297,7 +1311,7 @@ img{
 	text-align:left;
 	font-family: 'Bodoni_SvtyTwo_ITC_TT_BookIta';
 	font-weight: normal;
-	font-size: 2.2em;
+	font-size: 2.0em;
 	color:#363636;
 	padding-left: 35px;
 	margin-bottom:15px; 
@@ -1305,6 +1319,19 @@ img{
 .widgets h2 b{
 	padding-left: 15px;
 	font-size: 1.0em;
+}
+.widgets h3{
+	text-align:left;
+	font-family: 'Bodoni_SvtyTwo_ITC_TT_BookIta';
+	font-weight: normal;
+	font-size: 2.0em;
+	color:#363636;
+	padding-left: 35px;
+	margin-bottom:-35px; 
+}
+.widgets h3 b{
+	padding-left: 13px;
+	font-size: 1.3em;
 }
 .widgets{
 	margin-bottom: 30px;
@@ -1529,6 +1556,36 @@ ol.commentlist ul li{
 	background-color: #FFF;
 }
 /*FIM SINGLE*/
+/*FASHION VIDEOS*/
+.hr_fashion_videos_baixo{
+	
+	background-color: #000;
+}
+.hr_fashion_videos_cima{
+	margin-top: 20px;
+	margin-bottom: 170px;
+}
+.content_texto_fashion{
+	padding-top:50px;
+	padding-bottom: 70px;
+}
+.content_texto_fashion hr{
+	margin-top:25px;
+	width: 36%;
+}
+.texto_fashion{
+	position: absolute;
+	left: 38%;
+}
+.texto_fashion p{
+	font-family: 'Optima Medium';
+	font-size:2.0em;
+	text-transform: uppercase;
+	border: 1px solid #000;
+	padding:3px 10px;
+	background-color: #FFF;
+}
+/*FIM FASHION VIDEOS*/
 /*MOBILE*/
 @media screen and (max-width: 768px) {
 	.header, .right_container, .menu_footer, .instagram, .div_mais_vistos, .slide_post_mais_lidos{
@@ -1583,6 +1640,8 @@ ol.commentlist ul li{
 		line-height: 30px;
 		padding-bottom: 5px;
 		border-bottom: 1px solid #000;
+		margin-right: 5px;
+    	margin-left: 5px;
 	}
 	.post_tag_mobile a{
 		font-family: 'agfa_rotis_sans_serif';
@@ -1734,5 +1793,9 @@ ol.commentlist ul li{
 	}
 	.post_tag_artigo_mobile a:hover{
 		color:acacac;	
+	}
+	img{
+	max-width: 95%;
+	height: auto;
 	}
 }

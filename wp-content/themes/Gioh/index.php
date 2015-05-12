@@ -133,10 +133,20 @@ jQuery(".carousel-no-style").jCarouselLite({
 	endif;
 ?>
 </div>
-<div class="right_container">
-	<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('PaginaInicial') ) : ?>
-		<?php endif; ?>
+	<div class="right_container">
+		<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('PaginaInicial') ) : ?>
+			<?php endif; ?>
+	</div>
 </div>
+<div class="desktop" style="clear: both;">
+<div class="content_texto_fashion">
+			<hr class="left">
+			<div class="texto_fashion">
+				<p>fashion vídeos</p>
+			</div>
+			<hr class="right">
+		</div>
+<?php echo do_shortcode('[wonderplugin_gallery id="1"]'); ?>
 </div>
 	<div class="instagram">
 		<div class="content_texto_instagram">
