@@ -74,11 +74,12 @@
 <div class="desktop">
 	<div style="clear: both;"></div>
 	<div class="content_texto_veja_tambem">
-		<hr class="left">
-		<div class="texto_veja_tambem">
-			<p>VEJA TAMBÉM</p>
+		<div class="fundo_branco_veja_tambem">
+			<div class="texto_veja_tambem">
+				<p>VEJA TAMBÉM</p>
+			</div>
 		</div>
-		<hr class="right">
+			<hr>		
 	</div>
 
 <?php show_related_posts_by_tag(); ?>

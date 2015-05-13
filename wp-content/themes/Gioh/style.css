@@ -811,13 +811,13 @@ img{
 }
 .fundo_branco_bju_gio{
 	background-color: #FFF;
-	width: 160px;
+	width: 165px;
 	position: relative;
 	margin: 0 auto -30px;
 }
 .texto_bju_gio{
 	margin:auto;
-	width: 130px;
+	width: 135px;
 }
 .texto_bju_gio p{
 	font-family: 'dirty_hand_of_cre';
@@ -1004,7 +1004,7 @@ img{
 	margin: 0 auto;
 	margin-bottom:120px;
     position: relative;
-    width: 212px;
+    width: 214px;
 	background-color: #fff;	
 }
 .texto_follow:hover {
@@ -1532,13 +1532,15 @@ ol.commentlist ul li{
 	padding-bottom: 70px;
 	margin-top: 30px;
 }
-.content_texto_veja_tambem hr{
-	margin-top:25px;
-	width: 39%;
+.fundo_branco_veja_tambem{
+	position: relative;
+	width: 260px;
+	margin:0 auto -25px;
+	background-color: #FFF;
 }
 .texto_veja_tambem{
-	position: absolute;
-	left: 41.50%;
+	width: 230px;
+	margin: auto;
 }
 .texto_veja_tambem p{
 	font-family: 'Optima Medium';
