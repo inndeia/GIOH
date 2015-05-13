@@ -22,8 +22,8 @@
 }
 @font-face {
     font-family: 'agfa_rotis_sans_serif';
-    src: url('font/agfa_rotis_sans_serif.ttf');
-    src: url('font/agfa_rotis_sans_serif.ttf') format('truetype');
+    src: url('font/AgfaRotisSansSerif.otf');
+    src: url('font/AgfaRotisSansSerif.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
