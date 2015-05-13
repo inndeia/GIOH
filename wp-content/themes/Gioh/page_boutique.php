@@ -2,11 +2,12 @@
 <?php get_header(); ?>
 
 <div class="content_texto_boutique">
-	<hr class="left">
-	<div class="texto_boutique">
-		<p>BOUTIQUE</p>
+	<div class="fundo_branco_boutique">
+		<div class="texto_boutique">
+			<p>BOUTIQUE</p>
+		</div>
 	</div>
-	<hr class="right">
+	<hr >
 </div>
 <div class="container">
 	<?php if ( function_exists( 'meteor_slideshow' ) ) { meteor_slideshow("boutique", ""); } ?>

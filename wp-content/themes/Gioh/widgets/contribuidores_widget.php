@@ -36,33 +36,40 @@ class Contribuidores_Widget extends WP_Widget{
 		
 			return $instance;
 		}
-	private function alterarImagem($url){
-			$ext = explode(".", $url);
-			$inicio = $ext[0];
-			$inicio = explode("/",$inicio);
-			$tipo = $ext[1];
-			$count = count($inicio);
-			$nome = explode("-", $inicio[($count-1)]);
-			if($nome != false){
-		
-				$nome = $nome[0];
-				$nome .= "-215x275.".$tipo;
+private function alterarImagem($url){
+		$ext = explode(".", $url);
+		$inicio = "";
+		for($i=0;(count($ext)-1)>$i;$i++){
+			if($i ==0){
+				$inicio = $ext[$i];
 			}else{
-				$nome = $inicio."-215x275.".$tipo;
+				$inicio	.=".".$ext[$i];
 			}
-			$fim ="";
-			for($i = 0;($count-1) >$i;$i++){
-				if($i == 1){
-					$fim .= "/".$inicio[$i];
+		}
+		$inicio = explode("/",$inicio);
+		$tipo = $ext[(count($ext)-1)];
+		$count = count($inicio);
+		$nome = explode("-", $inicio[($count-1)]);
+		if($nome != false){
+		
+			$nome = $nome[0];
+			$nome .= "-215x275.".$tipo;
+		}else{
+			$nome = $inicio."-215x275.".$tipo;
+		}
+		$fim ="";
+		for($i = 0;($count-1) >$i;$i++){
+			if($i == 1){
+				$fim .= "/".$inicio[$i];
+			}else{
+				if($i == 0){
+					$fim .= $inicio[$i];
 				}else{
-					if($i == 0){
-						$fim .= $inicio[$i];
-					}else{
-						$fim .= "/".$inicio[$i];
-					}
+					$fim .= "/".$inicio[$i];
 				}
 			}
-			$fim .="/".$nome;
-			return $fim;
 		}
+		$fim .="/".$nome;
+		return $fim;
+	}
 }

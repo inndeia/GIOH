@@ -176,9 +176,16 @@ class Boutique_Widget extends WP_Widget{
 		}
 	private function alterarImagem($url){
 		$ext = explode(".", $url);
-		$inicio = $ext[0];
+		$inicio = "";
+		for($i=0;(count($ext)-1)>$i;$i++){
+			if($i ==0){
+				$inicio = $ext[$i];
+			}else{
+				$inicio	.=".".$ext[$i];
+			}
+		}
 		$inicio = explode("/",$inicio);
-		$tipo = $ext[1];
+		$tipo = $ext[(count($ext)-1)];
 		$count = count($inicio);
 		$nome = explode("-", $inicio[($count-1)]);
 		if($nome != false){

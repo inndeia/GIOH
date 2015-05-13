@@ -4,11 +4,12 @@
 	<hr>
 </div>
 <div class="div_mais_vistos">
-	<hr class="left">
-	<div class="texto_mais_vistos">
-		<p>Mais Vistos</p>
+	<div class="fundo_branco_mais_vistos">
+		<div class="texto_mais_vistos">
+			<p>Mais Vistos</p>
+		</div>
 	</div>
-	<hr class="right">
+	<hr>
 </div>
 <div class="slide_post_mais_lidos">
 	<hr class="hr_cima">
@@ -140,21 +141,23 @@ jQuery(".carousel-no-style").jCarouselLite({
 </div>
 <div class="desktop" style="clear: both;">
 <div class="content_texto_fashion">
-			<hr class="left">
-			<div class="texto_fashion">
-				<p>fashion vídeos</p>
+			<div class="fundo_branco_fashion">
+				<div class="texto_fashion">
+					<p>fashion vídeos</p>
+				</div>
 			</div>
-			<hr class="right">
+			<hr>
 		</div>
 <?php echo do_shortcode('[wonderplugin_gallery id="1"]'); ?>
 </div>
 	<div class="instagram">
 		<div class="content_texto_instagram">
-			<hr class="left">
-			<div class="texto_instagram">
-				<p>instagram</p>
+			<div class="fundo_branco_instagram">
+				<div class="texto_instagram">
+					<p>instagram</p>
+				</div>
 			</div>
-			<hr class="right">
+			<hr>
 		</div>
 		<div class="imagem_instagram">
 		<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Instagram') ) : ?>

@@ -4,11 +4,12 @@
 
 
 <div class="content_texto_contribuidores">
-	<hr class="left">
-	<div class="texto_contribuidores">
-		<p>CONTRIBUIDORES</p>
+	<div class="fundo_branco_contribuidores">
+		<div class="texto_contribuidores">
+			<p>CONTRIBUIDORES</p>
+		</div>
 	</div>
-	<hr class="right">
+	<hr>
 </div>
 <div class="container">
 	<div class="header_img_border">

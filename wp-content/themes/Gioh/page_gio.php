@@ -24,11 +24,12 @@
 	endif;
 ?>
 	<div class="content_texto_bju_gio">
-		<hr class="left">
-		<div class="texto_bju_gio">
-			<p>Bju!, Gio.</p>
+		<div class="fundo_branco_bju_gio">
+			<div class="texto_bju_gio">
+				<p>Bju!, Gio.</p>
+			</div>
 		</div>
-		<hr class="right">
+		<hr>
 	</div>
 </div>
 <div class="instagram">

@@ -520,9 +520,15 @@ img{
 	width: 8%;;
 	margin: 15px auto;
 }
+.fundo_branco_mais_vistos{
+	background-color: #FFF;
+	width: 250px;
+	position: relative;
+	margin: 0 auto -20px;
+}
 .texto_mais_vistos{
-	position: absolute;
-	left: 42%;
+	width: 220px;
+	margin: auto;
 }
 .texto_mais_vistos p{
 	text-align:center;
@@ -535,16 +541,7 @@ img{
 }
 .div_mais_vistos{
 	margin-top: 70px;
-	margin-bottom: 140px;
-}
-.div_mais_vistos hr{
-	width: 37%;
-}
-.div_mais_vistos hr.left{
-	margin-top: 20px;
-}
-.div_mais_vistos hr.right{
-	margin-top: 20px;
+	margin-bottom: 50px;
 }
 .hr_cima{
 	margin-bottom: 10px;
@@ -717,9 +714,12 @@ img{
 	background-color: #dbc0bd;
 	font-size: 1.5em;
 	padding: 1px;
-	padding-bottom:6px;	
-	padding-left: 8px;
-	padding-right: 6px;
+	width: 20px;
+	height: 10px;
+	margin-top: 24px;
+	padding-bottom: 9px;
+	padding-left: 6px;
+	padding-right: 5px;
 }
 .paginacao{
 	text-align:center;
@@ -809,10 +809,15 @@ img{
 .content_texto_bju_gio{
 	padding-bottom: 150px;
 }
+.fundo_branco_bju_gio{
+	background-color: #FFF;
+	width: 160px;
+	position: relative;
+	margin: 0 auto -30px;
+}
 .texto_bju_gio{
-	margin:0 auto;
-	position: absolute;
-	left: 44%;
+	margin:auto;
+	width: 130px;
 }
 .texto_bju_gio p{
 	font-family: 'dirty_hand_of_cre';
@@ -822,15 +827,7 @@ img{
 	background-color: #dbc0bd;
 	padding: 0px 15px 10px 15px;
 }
-.content_texto_bju_gio hr{
-	width: 40%;
-}
-.content_texto_bju_gio hr.left{
-	margin-top: 30px;
-}
-.content_texto_bju_gio hr.right{
-	margin-top: 30px;
-}
+
 /* FIM Pagina GIO*/
 /*Pagina CONTATO*/
 .nome_contato{
@@ -889,13 +886,15 @@ img{
 	padding-bottom: 70px;
 	margin-top: 30px;
 }
-.content_texto_contribuidores hr{
-	margin-top:35px;
-	width: 36%;
+.fundo_branco_contribuidores{
+	background-color: #FFF;
+	position: relative;
+	width: 320px;
+	margin: 0 auto -25px;
 }
 .texto_contribuidores{
-	position: absolute;
-	left: 38%;
+	width: 290px;
+	margin: auto;
 }
 .texto_contribuidores p{
 	font-family: 'Optima Medium';
@@ -944,20 +943,22 @@ img{
 	padding-bottom: 110px;
 	margin-top: 30px;
 }
-.content_texto_boutique hr{
-	margin-top:35px;
-	width: 36.81%;
+.fundo_branco_boutique{
+	position:relative;
+	width: 280px;
+	margin: 0 auto -35px;
+	background-color: #FFF;
 }
 .texto_boutique{
-	position: absolute;
-	left: 38.02%;
+	width: 250px;
+	margin: auto;
 }
 .texto_boutique p{
 	font-family: 'Optima_Bold_Oblique';
 	font-size:2.3em;
 	text-transform: uppercase;
 	border: 1px solid #000;
-	padding:12px 50px;
+	padding:12px 30px;
 	background-color: #FFF;
 }
 .artigo_boutique{
@@ -1002,8 +1003,8 @@ img{
 .texto_follow {
 	margin: 0 auto;
 	margin-bottom:120px;
-	position: absolute;
-	left:43%;
+    position: relative;
+    width: 212px;
 	background-color: #fff;	
 }
 .texto_follow:hover {
@@ -1025,9 +1026,15 @@ img{
 	font-size:1.3em;
 	font-family: 'Bodoni_SvtyTwo_ITC_TT_BookIta';
 }
+.fundo_branco_instagram{
+	background-color: #FFF;
+	width: 270px;
+	position: relative;
+	margin: 0 auto -25px;
+}
 .texto_instagram{
-	position: absolute;
-	left: 41%;
+	width: 240px;
+	margin: auto;
 }
 .texto_instagram p{
 	font-family: 'Optima Medium';
@@ -1037,21 +1044,7 @@ img{
 	padding:3px 15px;
 	background-color: #FFF;
 }
-.instagram hr{
-	width: 37%;
-}
-.instagram hr.left{
-	margin-top: 20px;
-}
-.instagram hr.right{
-	margin-top: 20px;
-}
-.left{
-	float:left;
-}
-.right{
-	float:right;
-}
+
 .imagem_instagram{
 	margin: 30px auto;
 	list-style-type:none;
@@ -1183,7 +1176,7 @@ img{
 #slider_boutique a { 
 	position: absolute; 
 	top: 0; 
-	left: 0; 
+	left: 13px; 
 	opacity: 0;
 	filter:alpha(opacity=0);
 	text-align: center;
@@ -1557,8 +1550,7 @@ ol.commentlist ul li{
 }
 /*FIM SINGLE*/
 /*FASHION VIDEOS*/
-.hr_fashion_videos_baixo{
-	
+.hr_fashion_videos_baixo{	
 	background-color: #000;
 }
 .hr_fashion_videos_cima{
@@ -1569,13 +1561,15 @@ ol.commentlist ul li{
 	padding-top:50px;
 	padding-bottom: 70px;
 }
-.content_texto_fashion hr{
-	margin-top:25px;
-	width: 36%;
+.fundo_branco_fashion{
+	background-color: #FFF;
+	width: 330px;
+	position: relative;
+	margin: 0 auto -25px;
 }
 .texto_fashion{
-	position: absolute;
-	left: 38%;
+	width: 300px;
+	margin: auto;
 }
 .texto_fashion p{
 	font-family: 'Optima Medium';
@@ -1601,7 +1595,7 @@ ol.commentlist ul li{
 		margin-top: 50px;
 	}
 	.footer{
-		height: 210px;
+		height: 230px;
 	}
 	.container{
 		width: 93.75%;
@@ -1674,9 +1668,8 @@ ol.commentlist ul li{
 	    background-color: #000;
 	    color:#fff;
 	    text-align: center;
-	    position: absolute;
-	    margin-top:-55px; 
-	    margin-left: 43.06%;    
+	    position: relative;
+	   	margin:40px auto -120px;  
 		letter-spacing:0.1em;
 		text-transform: lowercase;
 	}
@@ -1706,40 +1699,40 @@ ol.commentlist ul li{
 	.texto_bju_gio p {
 	    font-size: 1.6em;
 	}
-	.content_texto_bju_gio hr {
-	    width: 35%;
-	}		
+	.fundo_branco_bju_gio {
+		width: 135px;
+	}	
 	.texto_bju_gio {
-	    left: 39%;
+	    width: 105px;
 	}
 	.content_texto_contribuidores {
-	    margin-top: 90px;
-	    padding-bottom: 70px;
+	    margin-top: 60px;
+	    padding-bottom: 40px;
 	}
-	.texto_contribuidores {
-	    left: 27.5%;
+	.fundo_branco_contribuidores{
+		width: 240px;
+	}
+	.texto_contribuidores{
+		width: 210px;
 	}
 	.texto_contribuidores p {
 	    font-size: 1.2em;
-	}
-	.content_texto_contribuidores hr {
-	    margin-top: 25px;
-	    width: 25%;
 	}	
 	.content_texto_boutique {
-	    margin-top: 90px;
+	    margin-top: 60px;
+	    padding-bottom: 50px;
+	}
+	.fundo_branco_boutique{
+		width: 190px;
+		margin-bottom: -25px;
 	}
 	.texto_boutique {
-	    left: 31%;
+	    width: 160px;
 	}	
 	.texto_boutique p {
 	    font-size: 1.3em;
-	    padding: 12px 35px;
+	    padding: 12px 25px;
 	}
-	.content_texto_boutique hr {
-	    margin-top: 25px;
-	    width: 27%;
-	}	
 	.topo_categoria {
 	    margin: 78px auto 0;
 	    position: relative;
@@ -1795,7 +1788,7 @@ ol.commentlist ul li{
 		color:acacac;	
 	}
 	img{
-	max-width: 95%;
-	height: auto;
+		max-width: 95%;
+		height: auto;
 	}
 }
