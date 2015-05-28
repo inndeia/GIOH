@@ -11,20 +11,11 @@
 </div>
 <div class="container">
 	<?php if ( function_exists( 'meteor_slideshow' ) ) { meteor_slideshow("boutique", ""); } ?>
-<?php 
-	if(have_posts()): while(have_posts()) : the_post();
-?>
-<div class="artigo_boutique">
-	<?php the_content();?>
-</div>
-<?php
-	endwhile;
-	else:
-?>
-<p>Nenhum post encontrado!</p>
-<?php
-	endif;
-?>
+
+
+	<?php echo do_shortcode('[boutique_page]'); ?>
+
+
 </div>
 
 <?php get_footer(); ?>

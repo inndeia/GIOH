@@ -9,6 +9,7 @@ if(function_exists('register_sidebar'))
 add_theme_support('post-thumbnails');
 add_image_size( 'pequena', 250, 150, true );
 add_image_size( 'mais-visto-thumbnail', 300, 190, true );
+add_image_size( 'boutique_page', 250, 280, true );
 add_image_size( 'boutique-widget-thumbnail', 215, 275, true );
 if ( function_exists('register_sidebar') ) {
 		    register_sidebar( array(
@@ -98,15 +99,15 @@ function paginacao() {
 	);
 }
 
-function boutique_shortcode( $atts, $content = null ) {
-	return '<div class="boutique">' . $content . '<hr></div>';
-}
-add_shortcode( 'boutique', 'boutique_shortcode' );
+// function boutique_shortcode( $atts, $content = null ) {
+// 	return '<div class="boutique">' . $content . '<hr></div>';
+// }
+// add_shortcode( 'boutique', 'boutique_shortcode' );
 
-function contribuidores_shortcode( $atts, $content = null ) {
-	return '<div class="contribuidores">' . $content . '</div>';
-}
-add_shortcode( 'contribuidores', 'contribuidores_shortcode' );
+// function contribuidores_shortcode( $atts, $content = null ) {
+// 	return '<div class="contribuidores">' . $content . '</div>';
+// }
+// add_shortcode( 'contribuidores', 'contribuidores_shortcode' );
 function get_the_twitter_excerpt(){
 	$excerpt = get_the_content();
 	$excerpt = strip_shortcodes($excerpt);

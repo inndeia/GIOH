@@ -160,8 +160,8 @@ jQuery(".carousel-no-style").jCarouselLite({
 			<hr>
 		</div>
 		<div class="imagem_instagram">
-		<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Instagram') ) : ?>
-		<?php endif; ?>
+		<?php echo do_shortcode('[instagram-feed]'); ?>
+		
 		</div>
 		<div class="texto_follow">
 			<p><a target="_blanck" href="https://instagram.com/gio_ewbank">follow @gio_ewbank</a></p>
