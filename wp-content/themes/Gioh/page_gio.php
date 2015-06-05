@@ -34,11 +34,12 @@
 </div>
 <div class="instagram">
 	<div class="content_texto_instagram">
-		<hr class="left">
-		<div class="texto_instagram">
-			<p>instagram</p>
-		</div>
-		<hr class="right">
+			<div class="fundo_branco_instagram">
+				<div class="texto_instagram">
+					<p>instagram</p>
+				</div>
+			</div>
+			<hr>
 	</div>
 	<div class="imagem_instagram">
 		<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Instagram') ) : ?>

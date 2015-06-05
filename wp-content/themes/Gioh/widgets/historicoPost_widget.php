@@ -21,7 +21,7 @@ class HistoricoPost_Widget extends WP_Widget{
 						        get_post_type(),
 						        'secondary-image',
 						    	null,
-						    	'post-secondary-image-thumbnail',
+						    	'historio-publicacao',
 						    	null
 						    );
 						endif; ?></a><br>

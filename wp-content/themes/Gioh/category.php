@@ -12,10 +12,10 @@
 						<hr>
 				</div>
 				<div class="post_tag_categoria">
-							<p>
-								<span class="texto_tag">tags </span>
-								<?php the_tags( '', ' / ', '<br />' ); ?>
-							</p>
+					<div class="nome_tag_categoria"><span>tags </span></div>
+					<div class="tags_categoria">
+						<?php the_tags( '', ' / ', '<br />' ); ?>
+					</div>
 				</div>	
 					<div class="img_artigo">
 						
@@ -78,10 +78,10 @@
 		</div>
 		<div class="desktop">
 			<div class="post_tag">
-				<p>
-					<span class="texto_tag">tags </span>
+				<div class="nome_tag_artigo"><span>tags </span></div>
+				<div class="tags_artigo">
 					<?php the_tags( '', ' / ', '<br />' ); ?>
-				</p>
+				</div>
 			</div>
 		</div>
 		<div class="mobile">

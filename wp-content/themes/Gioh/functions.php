@@ -10,7 +10,8 @@ add_theme_support('post-thumbnails');
 add_image_size( 'pequena', 250, 150, true );
 add_image_size( 'mais-visto-thumbnail', 300, 190, true );
 add_image_size( 'boutique_page', 250, 280, true );
-add_image_size( 'boutique-widget-thumbnail', 215, 275, true );
+add_image_size( 'widget-home', 290, 324, true );
+add_image_size('historio-publicacao', 290, 116);
 if ( function_exists('register_sidebar') ) {
 		    register_sidebar( array(
 		        //nome da nova sidebar
@@ -44,7 +45,7 @@ if (class_exists('MultiPostThumbnails')) {
 			)
 	);
 }
-add_image_size('post-secondary-image-thumbnail', 252, 105);
+
 if ( function_exists('register_sidebar') ) {
 		 register_sidebar( array(
 		  //nome da nova sidebar

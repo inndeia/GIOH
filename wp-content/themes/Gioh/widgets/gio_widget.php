@@ -54,9 +54,9 @@ private function alterarImagem($url){
 		if($nome != false){
 		
 			$nome = $nome[0];
-			$nome .= "-215x275.".$tipo;
+			$nome .= "-290x324.".$tipo;
 		}else{
-			$nome = $inicio."-215x275.".$tipo;
+			$nome = $inicio."-290x324.".$tipo;
 		}
 		$fim ="";
 		for($i = 0;($count-1) >$i;$i++){
